@@ -10,20 +10,6 @@ def string(a,bit):
 	for i in range(len(a)/bit):
 		c=c+mapper_inverse[int(a[i*bit:(i+1)*bit],2)]
 	return c
-def lshift(a,x):
-	b=''
-	for i in range(len(a)-x):
-		b=b+a[i+x]
-	for i in range(x):
-		b=b+a[i]
-	return b
-def rshift(a,x):
-	b=''
-	for i in range(len(a)-x):
-		b=b+a[i]
-	for i in range(len(a)-1,len(a)-x-1,-1):
-		b=a[i]+b
-	return b
 def register_shift(a):
 	b=''
 	for i in range(len(a)-1):
